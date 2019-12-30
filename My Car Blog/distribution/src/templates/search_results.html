@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="col-4 offset-1 mb-5 mt-4">
+
+<h2>Search Results</h2>
+{% for post in queryset %}
+	<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+	<br/>
+{% endfor %}
+</div>
+
+
+{% endblock content %}
